@@ -14,9 +14,9 @@ const ArticleSection = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   return (
-    <div className="px-[5%] mt-20">
+    <div className="px-[5%] mt-20 xl:px-[3%]">
       <p className="font-semibold text-4xl text-primary">Latest Articles</p>
-      <div className="flex justify-between mt-14">
+      <div className="flex justify-between mt-14 lg:grid lg:grid-cols-2 lg:gap-6 lg:justify-items-center sm:grid-cols-1">
         {articleData
           .map((item, index) => (
             <ArticleCard
@@ -30,23 +30,33 @@ const ArticleSection = () => {
       </div>
       <div className="flex justify-center items-center space-x-2 mt-12">
         <button
-          className="border p-1 rounded"
+          className={`${
+            currentPage === 2 ? " border-darkGray" : "border-lightGray"
+          } p-1 rounded border`}
           onClick={() => {
             setCurrentPage(1);
             setPagination({ start: 0, end: 3 });
           }}
         >
-          <Left className="w-5" />
+          <Left className={`${
+              currentPage === 2 ? "text-darkGray" : "text-lightGray"
+            } w-5`} />
         </button>
-        <p>{currentPage}/2</p>
+        <p className="text-darkGray">{currentPage}/2</p>
         <button
-          className="border p-1 rounded"
+          className={`${
+            currentPage === 1 ? " border-darkGray" : "border-lightGray"
+          } p-1 rounded border`}
           onClick={() => {
             setCurrentPage(2);
             setPagination({ start: 3, end: 6 });
           }}
         >
-          <Right className="w-5" />
+          <Right
+            className={`${
+              currentPage === 1 ? "text-darkGray" : "text-lightGray"
+            } w-5`}
+          />
         </button>
       </div>
     </div>
