@@ -10,8 +10,8 @@ const Footer = () => {
       <div>
         <img src={Logo} alt="" />
       </div>
-      <div className="max-w-[220px] space-y-4 mb:max-w-full text-gray">
-        <p className="font-semibold text-xl text-primary">Contact Us</p>
+      <div className="max-w-[220px] space-y-4 mb:max-w-full text-gray text-[15px]  mb:text-[10px]">
+        <p className="font-semibold text-xl text-primary mb:text-base">Contact Us</p>
         <p>
           Lorem Ipsum Pvt Ltd.5/1, Magalton Road, Phartosh Gate near YTM Market,
           XYZ-343434
@@ -19,20 +19,22 @@ const Footer = () => {
         <p>example2020@gmail.com</p>
         <p>(904) 443-0343</p>
       </div>
-      <div className="space-y-4 text-gray">
-        <p className="font-semibold text-xl text-primary">More</p>
+      <div className="space-y-4 text-gray text-[15px] mb:text-[9px]">
+        <p className="font-semibold text-xl text-primary mb:text-base">More</p>
         <p>About Us</p>
         <p>Products</p>
         <p>Career</p>
         <p>Contact Us</p>
       </div>
-      <div className="space-y-4 w-[220px] mb:w-full ">
-        <p className="font-semibold text-xl mb:text-center">Social Links</p>
-        <div className="flex justify-between mb:justify-center space-x-6">
+      <div className="space-y-4 w-[220px] mb:w-full text-[15px] flex flex-col mb:text-[10px]">
+        <p className="font-semibold text-xl mb:text-center mb:text-base">Social Links</p>
+        <p className="hidden mb:block text-center">© 2022 Food Truck Example</p>
+        <div className="flex items-start justify-between mb:justify-center space-x-6 grow">
           <Twitter className="w-5" />
           <Facebook className="w-5" />
           <Instagram className="w-5" />
         </div>
+        <p className="mb:hidden">© 2022 Food Truck Example</p>
       </div>
     </div>
   );
